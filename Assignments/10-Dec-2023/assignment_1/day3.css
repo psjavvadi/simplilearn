@@ -1,0 +1,69 @@
+
+div p::first-letter{
+    color:blue;
+}
+div p::before{
+  content: "Welcome";
+
+}
+div p:nth-child(even)::first-letter{
+    color:orange;
+}
+div~p::after{
+  content: "Bye";
+}
+div p::first-line{
+  font-size: 20px;
+}
+
+
+#box1{
+  width: 200px;
+  height: 200px;
+  border: 10px black;
+  margin:100px;
+  background-color: red;
+  animation-name : shape-moving;
+  animation-duration: 8s;
+  position:relative;
+  /* animation-iteration-count: infinite; */
+  animation-direction: alternate;
+  animation-delay: 3s;
+}
+
+@keyframes shape-moving{
+  0%{
+    background-color:red;
+    width: 200px;
+    height: 100px;
+    left:0px;
+    top:0px;
+  }
+
+  25%{
+     background-color:yellow;
+     width:200px;
+     height:200px;
+     top:0px;
+     left:150px;
+  }
+
+  50%{
+     background-color: green;
+     top:150px;
+     left:150px;
+  }
+
+  75%{
+     background-color:pink;
+     left:0px;
+     top:150px;
+  }
+
+  100%{
+   background-color: blue;
+   top:0px;
+   left:0px;
+  }
+}
+
